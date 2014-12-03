@@ -18,6 +18,7 @@ exports.use = (robot) ->
         text       : str
         token      : process.env.HUBOT_SLACK_API_TOKEN
         icon_url   : process.env.HUBOT_SLACK_ICON_URL or "http://lorempixel.com/48/48/cats/"
+        link_name  : process.env.HUBOT_LINK_NAME or 0
 
       https.get "https://slack.com/api/chat.postMessage?#{@serialize args}"
   
